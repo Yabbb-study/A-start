@@ -1,0 +1,41 @@
+#利用AI生成的小练习
+# 今日记录——元组.
+# 因习题而掌握了f-string.
+# 任务1：创建一个商品元组
+# 每个商品：(商品名称, 价格, 库存数量)
+# 创建3个商品元组
+product1=("苹果",5.5,50)
+product2=("香蕉",3.0,80)
+product3=("橙子",4.1,60)
+# 任务2：显示所有商品信息
+# 格式：商品名称(价格：xx元，库存：xx件)
+print(f"{product1[0]}-价格:{product1[1]}-数量:{product1[2]}")
+print(f"{product2[0]}-价格:{product2[1]}-数量:{product2[2]}")
+print(f"{product3[0]}-价格:{product3[1]}-数量:{product3[2]}")
+# 任务3：找出最贵的商品
+if product1[1]>product2[1] and product1[1]>product3[1]:
+    print(f"最贵的商品是{product1[0]}")
+elif product2[1]>product1[1] and product2[1]>product3[1]:
+    print(f"最贵的商品是{product2[0]}")
+else:
+    print(f"最贵的商品是{product3[0]}")
+# 任务4：计算所有商品的总价值
+# 总价值 = 价格 × 库存数量 的总和
+total=product1[1]*product1[2]+product2[1]*product2[2]+product3[1]*product3[2]
+print(f"总价值为{total}")
+# 任务5：创建一个购物车元组
+# 包含用户想买的商品和数量
+selection1=("苹果",4)
+selection2=("香蕉",6)
+selection3=("橙子",3)
+shopping_cart=(selection1,selection2,selection3)
+print("\n购物车内容:")
+#for each in shopping_cart:
+#    print(each)                         直接打印
+#for each in shopping_cart:
+#    print(f"{each[0]}-{each[1]}")   利用索引
+for each in shopping_cart:
+    name,price=each
+    print(f"{name}-{price}")  #元组的解包！
+
+
