@@ -1,0 +1,7 @@
+string = input("请输入一段字符串: ")
+a = sum(c.isalpha() for c in string)
+b = sum(c.isdigit() for c in string)
+c = sum(c.isspace() for c in string)
+d = len(string) - a - b - c
+
+print(f"字母: {a}, 数字: {b}, 空格: {c}, 其他: {d}")
