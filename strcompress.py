@@ -27,7 +27,7 @@ if count > 2:
 else:
     result = result + current * count
 
-# 计算压缩率
+# 压缩率
 original_len = len()
 compressed_len = len(result)
 compression_rate = (1 - compressed_len / original_len) * 100
